@@ -1,0 +1,8 @@
+# This file is just showing that you can add components in different namespaces.
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mongodb-configmaptwo
+  namespace: custom-namespace # this will create the component in the 'custom-namespace' namespace.
+data:
+  database_url: mongodb-service.database
