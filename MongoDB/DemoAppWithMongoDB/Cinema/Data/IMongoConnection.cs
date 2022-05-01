@@ -12,6 +12,6 @@
 
         public Task UpdateRecordAsync<T>(string id, T record);
 
-        public Task DeleteFromRecordAsync<T>(string id);
+        public Task DeleteRecordAsync<T>(string id);
     }
 }

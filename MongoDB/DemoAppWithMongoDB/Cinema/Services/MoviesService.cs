@@ -36,7 +36,7 @@
 
         public async Task DeleteMovieAsync(string movieId)
         {
-            await _mongoCinemaDB.DeleteFromRecordAsync<MovieModel>(movieId);
+            await _mongoCinemaDB.DeleteRecordAsync<MovieModel>(movieId);
         }
 
         public async Task EditMovieAsync(string id, string title, string description, DateTime releaseDate, TimeSpan duration)

@@ -33,7 +33,7 @@
             await _database.GetCollection<T>(CollectioName).InsertOneAsync(record);
         }
 
-        public async Task DeleteFromRecordAsync<T>(string id)
+        public async Task DeleteRecordAsync<T>(string id)
         {
             var filter = Builders<T>.Filter.Eq("Id", id);
 
