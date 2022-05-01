@@ -1,0 +1,28 @@
+﻿@model MovieModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<form class="col-md-6 offset-3" asp-action="Create" asp-controller="Movies">
+    <div class="form-group">
+        <label asp-for="Title"></label>
+        <input asp-for="Title" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label asp-for="RealeaseDate"></label>
+        <input asp-for="RealeaseDate" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Duration"></label>
+        <input asp-for="Duration" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary offset-4 mt-2" />
+    </div>
+</form>

@@ -1,0 +1,29 @@
+﻿@model IEnumerable<MovieModel>
+
+@{
+    ViewData["Title"] = "Movies";
+}
+
+<div class="row text-center">
+    @foreach (var movie in Model)
+    {
+        <div class="col-md-3 mr-1">
+            <div>
+                Title: @movie.Title
+            </div>
+            <div>
+                Description: @movie.Description
+            </div>
+            <div>
+                Realease date: @movie.RealeaseDate.ToLongDateString()
+            </div>
+            <div>
+                Duration: @movie.Duration
+            </div>
+            <div>
+                <a class="btn btn-info" asp-action="Edit" asp-controller="Movies" asp-route-id="@movie.Id">Edit</a> |
+                <a class="btn btn-danger" asp-action="Delete" asp-controller="Movies" asp-route-id="@movie.Id">Delete</a>
+            </div>
+        </div>
+    }
+</div>
